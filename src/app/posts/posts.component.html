@@ -1,0 +1,103 @@
+<div class="container py-5">
+  <div class="row">
+    <h3 class="fw-bold text-center text-dark">Create New User</h3>
+    <div class="col-md-6 offset-md-3 my-3">
+      <form #form="ngForm" action="" (ngSubmit)="Get(form.value)">
+        <div class="input-group">
+          <input
+            ngModel
+            #name="ngModel"
+            name="name"
+            required
+            type="text"
+            class="form-control"
+            placeholder="name..."
+          />
+          &nbsp;&nbsp;
+          <input
+            ngModel
+            #username="ngModel"
+            name="username"
+            type="text"
+            required
+            class="form-control"
+            placeholder="username..."
+          />
+        </div>
+        <div class="input-group py-3">
+          <input
+            ngModel
+            #email="ngModel"
+            name="email"
+            required
+            type="text"
+            class="form-control"
+            placeholder="email..."
+          />
+          &nbsp;&nbsp;
+          <input
+            ngModel
+            #address="ngModel"
+            name="address"
+            required
+            type="text"
+            class="form-control"
+            placeholder="address..."
+          />
+        </div>
+        <input
+          type="number"
+          class="form-control"
+          #phone="ngModel"
+          ngModel
+          required
+          name="phone"
+          placeholder="phone"
+        />
+        <div class="input-group py-3">
+          <input
+            ngModel
+            #website="ngModel"
+            name="website"
+            required
+            type="text"
+            class="form-control"
+            placeholder="website..."
+          />
+          <button class="btn btn-danger" [disabled]="!form.valid" type="submit">
+            Send
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <table class="table table-responsive table-bordered">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Phone</th>
+      <th>Website</th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let user of posts">
+      <td>{{ user.id }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.username }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.address.city }}</td>
+      <td>{{ user.phone }}</td>
+      <td>{{ user.website }}</td>
+      <th>
+        <button (click)="remove(user)">
+          <i class="bi bi-trash text-danger"></i>
+        </button>
+        <button (click)="update(user)">
+          <i class="bi bi-pencil-square text-success"></i>
+        </button>
+      </th>
+    </tr>
+  </table>
+</div>

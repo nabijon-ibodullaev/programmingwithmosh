@@ -1,0 +1,10 @@
+<div class="media">
+  <img src="{{ temprature?.current.weather_icons }}" style="width: 60px; height: 60px;" class="mr-3" alt="...">
+  <div class="media-body">
+    <h5 class="mt-0">{{ temprature?.request.query}}</h5>
+    <p><i class="bi bi-thermometer-half"></i> - {{ temprature?.current.temperature}}</p>
+    <p><i class="bi bi-wind"></i> - {{ temprature?.current.wind_speed}}</p>
+    <p>humidity - {{ temprature?.current.humidity}}</p>
+    <p>Time - {{ temprature?.location.localtime}}</p>
+  </div>
+</div>
