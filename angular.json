@@ -103,7 +103,14 @@
           }
         },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "ProgrammingWithMosh:build:production",
+            "firebaseProject": "following-app-ad141",
+            "firebaseHostingSite": "following-app-ad141"
+          }
         }
       }
     }

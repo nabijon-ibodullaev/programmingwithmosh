@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "following-app-ad141"
+  },
+  "targets": {
+    "following-app-ad141": {
+      "hosting": {
+        "ProgrammingWithMosh": [
+          "following-app-ad141"
+        ]
+      }
+    }
+  }
+}

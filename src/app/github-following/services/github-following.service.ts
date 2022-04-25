@@ -7,6 +7,6 @@ import { HttpClient } from "@angular/common/http";
 })
 export class GithubFollowingService extends DataService {
   constructor(http: HttpClient) {
-    super("https://api.github.com/users/NabijonIbodullayev/following", http);
+    super("https://api.github.com/users/nabijon-ibodullaev/following", http);
   }
 }
